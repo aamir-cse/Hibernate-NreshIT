@@ -1,38 +1,23 @@
 package com.nreshit.hibernate;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import com.nreshit.hibernate.entities.Student;
 
-/**
- * Unit test for simple App.
- */
+import junit.framework.TestCase;
+
+
 public class AppTest 
     extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+	
+	StudentService studentService = new StudentService();
+	
+	public void getStudentTest() {
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+	    Student s = studentService.getById(37);
+	    System.out.println(s.getName());
+	    System.out.println(s.getCollege());
+	    System.out.println(s.getCertificates());
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+	    
+	}
 }

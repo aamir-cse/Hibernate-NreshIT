@@ -34,6 +34,7 @@
   <!-- xml/class mapping -->
 	   
 	   <mapping class="com.nreshit.hibernate.entities.Student" />
+	   <mapping class="com.nreshit.hibernate.entities.Certificate" />
 
  </session-factory>
 </hibernate-configuration>
